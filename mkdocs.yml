@@ -1,0 +1,19 @@
+site_name: Apuntes Programación 1º DAM
+site_url: https://RomanOlea.github.io/apuntes-programacion
+
+theme:
+  name: material
+  language: es
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - search.highlight
+
+nav:
+  - Hasiera: index.md
+  - Programazioa:
+    - Tema 0 — Oinarriak: programazioa/tema0-programazio-oinarriak.md
