@@ -23,4 +23,7 @@ markdown_extensions:
 nav:
   - Hasiera: index.md
   - Programazioa:
-    - Tema 0 — Oinarriak: programazioa/tema0-programazio-oinarriak.md
+    - Gaia 1 — Programazio Oinarriak:
+      - 1.0 Programazio Oinarriak: programazioa/gaia1/tema0-programazio-oinarriak.md
+      - 1.1 Aurkezpena: programazioa/gaia1/aurkezpena.md
+      - 1.2 Ariketak: programazioa/gaia1/ariketak.md
