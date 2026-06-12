@@ -14,8 +14,6 @@ theme:
     - search.highlight
 
 markdown_extensions:
- - toc:
-      toc_depth: 0
   - admonition
   - pymdownx.details
   - pymdownx.superfences
