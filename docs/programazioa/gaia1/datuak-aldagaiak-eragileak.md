@@ -3,7 +3,7 @@
 !!! abstract "Zer ikasiko duzu gai honetan?"
     Gai honetan Java programen oinarrizko osagaiak ikasiko ditugu: aldagaiak nola deklaratu eta erabiltzen diren, zein datu mota dauden, konstanteak zer diren, eta eragileak nola funtzionatzen duten. Hauek dira edozein programa idazteko ezinbesteko eraikuntza-blokeak.
 
-📄 [Teoria PDF formatuan deskargatu](recursos/G_1_2_-_Datuak.pdf)
+📄 [Teoria PDF formatuan deskargatu](recursos/G.1.2-Datuak.pdf)
 
 ---
 
@@ -444,5 +444,3 @@ Ikaslea da? true
 | Esleipena | `=` | `a = 5` |
 
 ---
-
-*Gai hau 1. DAMeko Programazio moduluaren 1. Gaiko 3. puntua da — Informatika Sistemen Administrazioa*
