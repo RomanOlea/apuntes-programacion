@@ -24,7 +24,6 @@ nav:
   - Hasiera: index.md
   - Programazioa:
     - Gaia 1 — Programazio Oinarriak:
-      - Gaia 1.0 — Programazio Oinarriak:
-        - 1.0.0 Programazio Oinarriak: programazioa/gaia1/programazio-oinarriak.md
-        - 1.0.1 Aurkezpena: programazioa/gaia1/aurkezpena.md
+      - 1.1 — Programazio Oinarriak: programazioa/gaia1/programazio-oinarriak.md
+      - 1.2 — Programazio Oinarriak: programazioa/gaia1/java-programazio-lengoaia.md      
 
