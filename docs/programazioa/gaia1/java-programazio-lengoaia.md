@@ -3,8 +3,7 @@
 !!! abstract "Zer ikasiko duzu gai honetan?"
     Gai honetan Java programazio-lengoaiaren oinarriak ikasiko ditugu: zer den programazio-lengoaia bat, nola funtzionatzen duen Java makinak, zein diren Java-ren ezaugarri nagusiak eta nola idazten eta exekutatzen den lehen programa. Hau 1. DAMeko programazioaren sarrera teorikoa da.
 
-📄 [Teoria PDF formatuan deskargatu](recursos/G_1_1_-_Java_Programazio_Lengoaia.pdf)
-
+📄 [Aurkezpena PDF formatuan deskargatu](G.1.1-Java_Programazio_Lengoaia.pdf)
 ---
 
 ## 1. Programazio Lengoaia: Gizakiaren eta Makinaren Arteko Zubia
@@ -427,5 +426,3 @@ java Kaixo          # Exekutatu
 | `System.out.println` | Pantailaratzeko metodoa |
 
 ---
-
-*Gai hau 1. DAMeko Programazio moduluaren sarrera teorikoa da — Informatika Sistemen Administrazioa*
