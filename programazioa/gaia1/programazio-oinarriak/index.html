@@ -1,0 +1,1915 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://RomanOlea.github.io/apuntes-programacion/programazioa/gaia1/programazio-oinarriak/">
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../java-programazio-lengoaia/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1.1 — Programazio Oinarriak - Apuntes Programación 1º DAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#oinarrizko-programazioa-javan" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Apuntes Programación 1º DAM" class="md-header__button md-logo" aria-label="Apuntes Programación 1º DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Programación 1º DAM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.1 — Programazio Oinarriak
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hasiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Programazioa
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes Programación 1º DAM" class="md-nav__button md-logo" aria-label="Apuntes Programación 1º DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes Programación 1º DAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programazioa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programazioa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gaia 1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gaia 1 — Programazio Oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-aplikazioen-antolaketa-egitura-logikoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Aplikazioen Antolaketa: Egitura Logikoa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programa-baten-egitura-generikoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Programa Baten Egitura Generikoa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Programa Baten Egitura Generikoa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-metodoaren-hitzen-esanahia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        main metodoaren hitzen esanahia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fitxategien-izenen-urrezko-araua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fitxategien Izenen Urrezko Araua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kanpoko-liburutegiak-jar-fitxategiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Kanpoko Liburutegiak: JAR Fitxategiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lehenengo-programa-kaixo-mundua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lehenengo Programa: 'Kaixo Mundua'
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-kodea-dokumentatzen-iruzkinak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Kodea Dokumentatzen: Iruzkinak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-aldagaiak-datuen-biltegiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Aldagaiak: Datuen Biltegiak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Aldagaiak: Datuen Biltegiak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adierazpen-sintaxia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adierazpen sintaxia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aldagaien-arauak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aldagaien arauak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-datu-motak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Datu Motak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Datu Motak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jatorrizko-motak-primitive-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jatorrizko Motak (Primitive Types)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreferentzia-motak-reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreferentzia Motak (Reference Types)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-erreferentzia-motak-eta-heap-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Erreferentzia Motak eta Heap Memoria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-emaitzak-pantailaratzea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Emaitzak Pantailaratzea
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Emaitzak Pantailaratzea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konkatenazioa-ikurra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konkatenazioa (+ ikurra)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-operadoreak-datuak-eraldatzeko-tresnak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Operadoreak: Datuak Eraldatzeko Tresnak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Operadoreak: Datuak Eraldatzeko Tresnak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aritmetikoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aritmetikoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erlazionalak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erlazionalak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logikoak-booleanoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logikoak / Booleanoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esleipenezkoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esleipenezkoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-laburpena-dena-elkarlanean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Laburpena: Dena Elkarlanean
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontzeptuen-laburpen-taula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontzeptuen Laburpen-Taula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ariketak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ariketak
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-programazio-lengoaia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 — Java Programazio Lengoaia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datuak-aldagaiak-eragileak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 — Datuak, aldagaiak eta eragileak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-scanner.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 — GEHIGARRI - Java Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mota-bihurketa.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5 — GEHIGARRI - Mota bihurketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../konstanteak.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.6 — GEHIGARRI - Konstanteak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-aplikazioen-antolaketa-egitura-logikoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Aplikazioen Antolaketa: Egitura Logikoa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programa-baten-egitura-generikoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Programa Baten Egitura Generikoa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Programa Baten Egitura Generikoa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-metodoaren-hitzen-esanahia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        main metodoaren hitzen esanahia
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fitxategien-izenen-urrezko-araua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Fitxategien Izenen Urrezko Araua
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kanpoko-liburutegiak-jar-fitxategiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Kanpoko Liburutegiak: JAR Fitxategiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lehenengo-programa-kaixo-mundua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Lehenengo Programa: 'Kaixo Mundua'
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-kodea-dokumentatzen-iruzkinak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Kodea Dokumentatzen: Iruzkinak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-aldagaiak-datuen-biltegiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Aldagaiak: Datuen Biltegiak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Aldagaiak: Datuen Biltegiak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adierazpen-sintaxia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adierazpen sintaxia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aldagaien-arauak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aldagaien arauak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-datu-motak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Datu Motak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Datu Motak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jatorrizko-motak-primitive-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jatorrizko Motak (Primitive Types)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreferentzia-motak-reference-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erreferentzia Motak (Reference Types)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-erreferentzia-motak-eta-heap-memoria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Erreferentzia Motak eta Heap Memoria
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-emaitzak-pantailaratzea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Emaitzak Pantailaratzea
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Emaitzak Pantailaratzea">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konkatenazioa-ikurra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Konkatenazioa (+ ikurra)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-operadoreak-datuak-eraldatzeko-tresnak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Operadoreak: Datuak Eraldatzeko Tresnak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Operadoreak: Datuak Eraldatzeko Tresnak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aritmetikoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aritmetikoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erlazionalak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erlazionalak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logikoak-booleanoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logikoak / Booleanoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esleipenezkoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esleipenezkoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-laburpena-dena-elkarlanean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Laburpena: Dena Elkarlanean
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontzeptuen-laburpen-taula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontzeptuen Laburpen-Taula
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ariketak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ariketak
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="oinarrizko-programazioa-javan">Oinarrizko Programazioa Javan</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Zer ikasiko duzu gai honetan?</p>
+<p>Gai honetan Java programazio-lengoaiaren oinarriak ikasiko ditugu: programa bat zer den, nola antolatzen den, zein datu mota dauden eta nola idazten den lehen programa. Hau 1. DAMeko programazioaren abiapuntua da.</p>
+</div>
+<p>📄 <a href="../G.1.0-Programazio_Oinarriak.pdf">Aurkezpena PDF formatuan deskargatu</a></p>
+<hr />
+<h2 id="1-aplikazioen-antolaketa-egitura-logikoa">1. Aplikazioen Antolaketa: Egitura Logikoa</h2>
+<p>Java aplikazio bat hainbat elementuz osatuta dago, hierarkikoki antolatuta:</p>
+<div class="highlight"><pre><span></span><code>Proiektua
+└── Paketeak
+    └── Azpi-paketeak
+        ├── Kalkulagailua.java   (Klasea)
+        └── Ikaslea.java         (Klasea)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Elementua</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Proiektua</strong></td>
+<td>Aplikazioaren oinarri nagusia. Klasez osatuta dago.</td>
+</tr>
+<tr>
+<td><strong>Paketeak</strong></td>
+<td>Klaseak antolatzeko modu logikoa. Proiektu handietan antolaketa errazten dute.</td>
+</tr>
+<tr>
+<td><strong>Azpi-paketeak</strong></td>
+<td>Egitura hierarkikoa sortzeko — pakete baten barruan beste batzuk egon daitezke.</td>
+</tr>
+<tr>
+<td><strong>Klaseak</strong></td>
+<td>Benetako kodea gordetzen duten fitxategiak (adib. <code>Kalkulagailua.java</code>).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Analogia</p>
+<p>Pentsatu proiektua liburutegi bat dela, paketeak sailak direla eta klaseak liburuak direla. Dena ordenatuta egoteak bilaketa errazten du.</p>
+</div>
+<hr />
+<h2 id="2-programa-baten-egitura-generikoa">2. Programa Baten Egitura Generikoa</h2>
+<p>Java programa batek beti egitura bera du:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">nire_paketea</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">kanpoko_liburutegiak</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ProgramaAdibidea</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// Aldagaien adierazpena</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">zenbakia</span><span class="p">;</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">testua</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// main metodoa (Exekutatzen dena)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Sententziak</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Zatia</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>package nire_paketea</code></td>
+<td>Fitxategia zein paketetakoa den adierazten du</td>
+</tr>
+<tr>
+<td><code>import kanpoko_liburutegiak</code></td>
+<td>Kanpoko klaseak edo liburutegiak ekartzeko</td>
+</tr>
+<tr>
+<td><code>public class ProgramaAdibidea</code></td>
+<td>Objektuaren egitura. Klase publiko bakarra egon daiteke fitxategiko</td>
+</tr>
+<tr>
+<td><code>public static void main(String[] args)</code></td>
+<td>Programaren exekuzio-fluxuaren hasiera puntua</td>
+</tr>
+</tbody>
+</table>
+<h3 id="main-metodoaren-hitzen-esanahia"><code>main</code> metodoaren hitzen esanahia</h3>
+<div class="highlight"><pre><span></span><code>public   static   void   main   (String[] args)
+  │        │        │      │           │
+  │        │        │      │           └── String-en array bat. Parametro gisa
+  │        │        │      │               testu kateak jasotzeko prestatua.
+  │        │        │      └── Programa hastean gauzatutako metodo-mota berezia.
+  │        │        │          Javan kode guztia klase baten barruan egon behar da.
+  │        │        └── Metodo honek ez du ezer itzultzen.
+  │        └── Klasea instantziatu gabe deitu dakioke.
+  └── Edozein lekutatik deitu daiteke.
+</code></pre></div>
+<hr />
+<h2 id="3-fitxategien-izenen-urrezko-araua">3. Fitxategien Izenen Urrezko Araua</h2>
+<div class="admonition danger">
+<p class="admonition-title">Arau garrantzitsua</p>
+<p>Java-n <strong>klase publikoaren izena eta fitxategiaren izena berdinak izan behar dira</strong> (maiuskulak/minuskulak barne). Hau ez betetzeak konpilazio-errorea sortuko du.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">✅ Zuzena</label><label for="__tabbed_1_2">❌ Okerra</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Fitxategia: Kaixo.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kaixo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kaixo Mundua!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1">// Fitxategia: Kaixo.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Agur</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// Errorea: fitxategiaren izenarekin ez dator bat</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Agur!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Konbentzioa</p>
+<p>Klase izenak <strong>letra larriz</strong> hasten dira beti: <code>KaixoMundua</code>, <code>Kalkulagailua</code>, <code>IkasleZerrenda</code>.</p>
+</div>
+<hr />
+<h2 id="4-kanpoko-liburutegiak-jar-fitxategiak">4. Kanpoko Liburutegiak: JAR Fitxategiak</h2>
+<p><strong>JAR</strong> (Java ARchive) fitxategi bat ZIP fitxategi moduko bat da, baina barruan konpilatutako <code>.class</code> fitxategiak eta manifest fitxategi bat ditu.</p>
+<p><strong>Zertarako balio du?</strong>
+Aplikazioek beste proiektu batzuen laguntza behar dutenean erabiltzen da funtzionalitateak zabaltzeko.</p>
+<p><strong>Adibidea:</strong>
+<div class="highlight"><pre><span></span><code>commons-math3-3.6.1.jar   ← Apache Commons Math liburutegia
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.commons.math3.stat.StatUtils</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Estatistikak</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">datuak</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">};</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">batezbestekoa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StatUtils</span><span class="p">.</span><span class="na">mean</span><span class="p">(</span><span class="n">datuak</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Batez bestekoa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">batezbestekoa</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Maven eta Gradle</p>
+<p>Geroago ikasiko duzun bezala, Maven eta Gradle tresnek JAR fitxategiak automatikoki kudeatzen dituzte. Ez da eskuz deskargatu behar.</p>
+</div>
+<hr />
+<h2 id="5-lehenengo-programa-kaixo-mundua">5. Lehenengo Programa: 'Kaixo Mundua'</h2>
+<p>Tradizionalki, programazio-lengoaia berri bat ikastean idazten den lehen programa "Kaixo Mundua" da:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">ejemplos</span><span class="p">;</span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Ejemplo HolaMundo</span>
+<span class="cm"> * Imprime el mensaje &quot;Hola, Mundo!&quot; con salto de línea</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Imprime el mensaje &quot;Hola, Mundo!&quot;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, Mundo!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Programa honek erakusten duena:</strong></p>
+<ul>
+<li><code>package</code> adierazpena nola idazten den</li>
+<li><code>/* ... */</code> iruzkina nola erabiltzen den</li>
+<li><code>// ...</code> lerroko iruzkina nola erabiltzen den</li>
+<li><code>System.out.println()</code> pantailaratzeko nola erabiltzen den</li>
+</ul>
+<hr />
+<h2 id="6-kodea-dokumentatzen-iruzkinak">6. Kodea Dokumentatzen: Iruzkinak</h2>
+<p>Iruzkinak programatzaileentzat idatzitako oharrak dira. <strong>Konpiladoreak ez ditu kontuan hartzen.</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Lerroko Iruzkina</label><label for="__tabbed_2_2">Paragrafo Iruzkina</label><label for="__tabbed_2_3">Javadoc Iruzkina</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="c1">// Testua</span>
+</code></pre></div>
+Hasi <code>//</code>-rekin eta lerroaren amaieraraino zabaltzen da.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="cm">/* Testua */</span>
+</code></pre></div>
+Lerro batean edo gehiagotan egon daiteke. Ez dio exekuzio-fluxuari eragiten.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="cm">/** Testua */</span>
+</code></pre></div>
+HTML-n dokumentazio ofiziala sortzeko (Oracle APIlaren estilora). Etiketak onartzen ditu.</p>
+</div>
+</div>
+</div>
+<p><strong>Javadoc etiketak:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Etiketa</th>
+<th>Erabilera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@param</code></td>
+<td>Metodo baten parametroa azaltzeko</td>
+</tr>
+<tr>
+<td><code>@return</code></td>
+<td>Metodoaren itzulera balioa azaltzeko</td>
+</tr>
+<tr>
+<td><code>@author</code></td>
+<td>Egilea adierazteko</td>
+</tr>
+<tr>
+<td><code>@version</code></td>
+<td>Bertsioa adierazteko</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Bi zenbaki batzen dituen metodoa.</span>
+<span class="cm"> * @param a Lehen zenbakia</span>
+<span class="cm"> * @param b Bigarren zenbakia</span>
+<span class="cm"> * @return Batura emaitza</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">batu</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="7-aldagaiak-datuen-biltegiak">7. Aldagaiak: Datuen Biltegiak</h2>
+<p>Aldagai bat <strong>balio bat gordetzen den memoria-posizio bat da</strong>. Izen bat du (identifikatzailea) bertara sarbidea emateko.</p>
+<h3 id="adierazpen-sintaxia">Adierazpen sintaxia</h3>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">mota</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">izena</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">balioa</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span><span class="w">           </span><span class="c1">// osoko zenbakia</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">altura</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.75</span><span class="p">;</span><span class="w">     </span><span class="c1">// dezimal zenbakia</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">aktiboa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">   </span><span class="c1">// balio logikoa</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">         </span><span class="c1">// karaktere bakarra</span>
+<span class="n">String</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ane&quot;</span><span class="p">;</span><span class="w">     </span><span class="c1">// testu katea</span>
+</code></pre></div>
+<h3 id="aldagaien-arauak">Aldagaien arauak</h3>
+<ul>
+<li>Izen <strong>deskribatzaileak</strong> erabiltzea komeni da: <code>adina</code> ez <code>a</code>, <code>erabiltzaileIzena</code> ez <code>ei</code></li>
+<li>Beti <strong>letra xehe</strong> batetik hasi: <code>adina</code>, <code>erabiltzaileIzena</code></li>
+<li>Hitz anitzeko izenak <strong>camelCase</strong> formatuan: <code>batezBestekooBalioa</code></li>
+<li><strong>Ezin dira</strong> erabili: <code>class</code>, <code>int</code>, <code>public</code>... (Java hitz erreserbatuak)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Kontuz maiuskulak/minuskulakekin</p>
+<p>Java <strong>case-sensitive</strong> da. <code>adina</code>, <code>Adina</code> eta <code>ADINA</code> hiru aldagai desberdin dira.</p>
+</div>
+<hr />
+<h2 id="8-datu-motak">8. Datu Motak</h2>
+<p>Javak bi aldagai mota ditu: <strong>Jatorrizko motak</strong> eta <strong>Erreferentzia motak</strong>.</p>
+<h3 id="jatorrizko-motak-primitive-types">Jatorrizko Motak (Primitive Types)</h3>
+<p>Memorian balioa zuzenean gordetzen dute.</p>
+<table>
+<thead>
+<tr>
+<th>Mota</th>
+<th>Tamaina</th>
+<th>Balioen tartea</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>1 byte</td>
+<td>-128 → 127</td>
+<td><code>byte b = 100;</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>2 byte</td>
+<td>-32.768 → 32.767</td>
+<td><code>short s = 1000;</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4 byte</td>
+<td>-2.147M → 2.147M</td>
+<td><code>int i = 42;</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>8 byte</td>
+<td>Oso handia</td>
+<td><code>long l = 123456789L;</code></td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4 byte</td>
+<td>6-7 dezimal digitu</td>
+<td><code>float f = 3.14f;</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8 byte</td>
+<td>15-16 dezimal digitu</td>
+<td><code>double d = 3.14159;</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td>1 bit</td>
+<td><code>true</code> / <code>false</code></td>
+<td><code>boolean b = true;</code></td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>2 byte</td>
+<td>Karaktere bakarra</td>
+<td><code>char c = 'A';</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Zein erabili?</p>
+<ul>
+<li>Zenbaki osoetarako → <code>int</code> (gehienetan nahikoa)</li>
+<li>Dezimaletarako → <code>double</code> (zehaztasun handiagoa <code>float</code> baino)</li>
+<li>Egia/Gezurra → <code>boolean</code></li>
+<li>Karaktere bakarrerako → <code>char</code> (komatxo <strong>sinpleak</strong>: <code>'A'</code>)</li>
+</ul>
+</div>
+<h3 id="erreferentzia-motak-reference-types">Erreferentzia Motak (Reference Types)</h3>
+<p>Objektu bati egiten diote erreferentzia — daturik ez, memoria-helbidea gordetzen dute.</p>
+<table>
+<thead>
+<tr>
+<th>Mota</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td><code>String izena = "Ane";</code></td>
+</tr>
+<tr>
+<td>Array-ak</td>
+<td><code>int[] zenbakiak = {1, 2, 3};</code></td>
+</tr>
+<tr>
+<td>Klaseak</td>
+<td><code>Scanner sarrera = new Scanner(System.in);</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Defektuzko balioa:</strong> <code>null</code> (inora apuntatzen ez duenean)</p>
+<hr />
+<h2 id="9-erreferentzia-motak-eta-heap-memoria">9. Erreferentzia Motak eta Heap Memoria</h2>
+<div class="highlight"><pre><span></span><code>Jatorrizko aldagaia:          Erreferentzia aldagaia:
+┌─────────────────┐           ┌─────────────────┐
+│aPrimitiveVariable│           │aReferenceVariable│
+│      value      │           │    reference  ●──┼──→  [ Heap memoria ]
+└─────────────────┘           └─────────────────┘      [ An instance  ]
+
+                               ┌─────────────────┐
+                               │aReferenceVariable│
+                               │      null    ●──┼──→  ✗ (inora ez)
+                               └─────────────────┘
+</code></pre></div>
+<ul>
+<li><strong>Zuzenbidea</strong>: Datuak dauden memoriaren helbidea gordetzen dute, ez datua bera.</li>
+<li><strong>Heap eremua</strong>: Objektu konplexuak (instantziak) <code>Heap</code> izeneko memoria gunean sortzen dira.</li>
+<li><strong>Null balioa</strong>: Erreferentzia batek inora apuntatzen ez duenean, bere balioa <code>null</code> da.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">NullPointerException</p>
+<p><code>null</code> balioko erreferentzia bati metodo bat deitzen badiozu, <strong>NullPointerException</strong> errorea jasoko duzu. Java-ko errore ohikoenetako bat da.</p>
+</div>
+<hr />
+<h2 id="10-emaitzak-pantailaratzea">10. Emaitzak Pantailaratzea</h2>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Testua&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// Inprimatu eta lerro-jauzia egin</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Testua&quot;</span><span class="p">);</span><span class="w">     </span><span class="c1">// Inprimatu baina lerro berean jarraitu</span>
+</code></pre></div>
+<h3 id="konkatenazioa-ikurra">Konkatenazioa (<code>+</code> ikurra)</h3>
+<p><code>+</code> ikurra erabiliz testu kateak eta aldagaiak elkar daitezke pantailaratzeko:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">balioa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="n">String</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ane&quot;</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Balioa hau da: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balioa</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Erabiltzailea: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, adina: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balioa</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Irteera:</strong>
+<div class="highlight"><pre><span></span><code>Balioa hau da: 10
+Erabiltzailea: Ane, adina: 10
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">printf erabiltzea</p>
+<p>Formatu kontrolatuagoa nahi baduzu:
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Izena: %s, Adina: %d%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">izena</span><span class="p">,</span><span class="w"> </span><span class="n">adina</span><span class="p">);</span>
+</code></pre></div>
+- <code>%s</code> → String batentzat
+- <code>%d</code> → Osoko zenbaki batentzat
+- <code>%f</code> → Dezimal zenbaki batentzat
+- <code>%n</code> → Lerro-jauzia</p>
+</div>
+<hr />
+<h2 id="11-operadoreak-datuak-eraldatzeko-tresnak">11. Operadoreak: Datuak Eraldatzeko Tresnak</h2>
+<h3 id="aritmetikoak">Aritmetikoak</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 13 → Batuketa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 7  → Kenketa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 30 → Biderketa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 3  → Zatiketa (osoa!)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 1  → Hondarra (modulo)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="o">++</span><span class="p">);</span><span class="w">     </span><span class="c1">// 10 → Lehenik erabili, gero handitu</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">++</span><span class="n">a</span><span class="p">);</span><span class="w">     </span><span class="c1">// 12 → Lehenik handitu, gero erabili</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Osoko zatiketa</p>
+<p><code>10 / 3 = 3</code> Java-n, ez <code>3.33</code>. Dezimala nahi baduzu: <code>(double) 10 / 3</code></p>
+</div>
+<h3 id="erlazionalak">Erlazionalak</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">    </span><span class="c1">// true</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">    </span><span class="c1">// false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// false</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// false  → Berdintasuna</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true   → Desberdintasuna</span>
+</code></pre></div>
+<h3 id="logikoak-booleanoak">Logikoak / Booleanoak</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// false → AND: biak true izan behar</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true  → OR: bat true nahikoa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="n">a</span><span class="p">);</span><span class="w">       </span><span class="c1">// false → NOT: alderantzizkoa</span>
+</code></pre></div>
+<h3 id="esleipenezkoak">Esleipenezkoak</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+
+<span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">    </span><span class="c1">// x = x + 5  → 15</span>
+<span class="n">x</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">    </span><span class="c1">// x = x - 3  → 12</span>
+<span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span><span class="c1">// x = x * 2  → 24</span>
+<span class="n">x</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c1">// x = x / 4  → 6</span>
+<span class="n">x</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c1">// x = x % 4  → 2</span>
+</code></pre></div>
+<hr />
+<h2 id="12-laburpena-dena-elkarlanean">12. Laburpena: Dena Elkarlanean</h2>
+<p>Hona hemen ikasitako kontzeptu guztiak programa txiki batean:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">estatistikak</span><span class="p">;</span><span class="w">                                        </span><span class="c1">// 1. Paketea</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.apache.commons.math3.stat.StatUtils</span><span class="p">;</span><span class="w">             </span><span class="c1">// 2. JAR/Liburutegia</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Estatistikak</span><span class="w"> </span><span class="p">{</span><span class="w">                                  </span><span class="c1">// 3. Klasearen egitura</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">datuak</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">};</span><span class="w">            </span><span class="c1">// 4. Erreferentzia mota (Array-a)</span>
+
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">batezbestekoa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StatUtils</span><span class="p">.</span><span class="na">mean</span><span class="p">(</span><span class="n">datuak</span><span class="p">);</span><span class="w">       </span><span class="c1">// 5. Jatorrizko mota + Esleipen operadorea</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Batez bestekoa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">batezbestekoa</span><span class="p">);</span><span class="w"> </span><span class="c1">// 6. Pantailaratzea konkatenazioarekin</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Programa txiki honek bateratzen duena:</strong></p>
+<ol>
+<li>Paketeak → aplikazioaren antolaketa</li>
+<li>JAR liburutegia → kanpoko funtzionalitateak</li>
+<li>Klasearen egitura → Java programaren oinarria</li>
+<li>Erreferentzia mota → array bat sortu</li>
+<li>Jatorrizko mota → emaitza <code>double</code> batean gorde</li>
+<li>Pantailaratzea → emaitza erakutsi</li>
+</ol>
+<hr />
+<h2 id="kontzeptuen-laburpen-taula">Kontzeptuen Laburpen-Taula</h2>
+<table>
+<thead>
+<tr>
+<th>Kontzeptua</th>
+<th>Adibidea</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paketea</td>
+<td><code>package com.ejemplo;</code></td>
+<td>Klaseak antolatzeko</td>
+</tr>
+<tr>
+<td>Inportazioa</td>
+<td><code>import java.util.Scanner;</code></td>
+<td>Kanpoko klaseak ekartzeko</td>
+</tr>
+<tr>
+<td>Klasea</td>
+<td><code>public class Kaixo {}</code></td>
+<td>Kodearen edukiontzia</td>
+</tr>
+<tr>
+<td>main metodoa</td>
+<td><code>public static void main(String[] args)</code></td>
+<td>Exekuzioaren hasiera</td>
+</tr>
+<tr>
+<td>Aldagaia</td>
+<td><code>int adina = 25;</code></td>
+<td>Datu biltegi bat</td>
+</tr>
+<tr>
+<td>Jatorrizko mota</td>
+<td><code>int, double, boolean, char</code></td>
+<td>Balio sinpleak</td>
+</tr>
+<tr>
+<td>Erreferentzia mota</td>
+<td><code>String, Scanner, int[]</code></td>
+<td>Objektuak</td>
+</tr>
+<tr>
+<td>Pantailaratzea</td>
+<td><code>System.out.println()</code></td>
+<td>Irteera kontsolan</td>
+</tr>
+<tr>
+<td>Iruzkina</td>
+<td><code>// ...</code> edo <code>/* ... */</code></td>
+<td>Kodearen azalpena</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ariketak">Ariketak</h2>
+<div class="admonition question">
+<p class="admonition-title">1. Ariketa — Lehen programa</p>
+<p>Sortu <code>NireIzena.java</code> fitxategi bat zure izena eta abizena pantailaratzen duena bi lerrotan.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NireIzena</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Izena: Ane&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Abizena: Etxeberria&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">2. Ariketa — Aldagaiak</p>
+<p>Sortu programa bat ikasle baten datuak (izena, adina, nota) aldagaitan gordetzen dituena eta pantailaratzen dituena.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IkasleaDatuak</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Mikel&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">nota</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">8.5</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Izena: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izena</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adina: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">adina</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nota: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nota</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">3. Ariketa — Operadoreak</p>
+<p>Bi zenbaki adierazi aldagaietan eta eragiketa hauek egin eta pantailan erakutsi: batuketa, kenketa, biderketa, zatiketa eta hondarra.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kalkulagailua</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Batuketa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kenketa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Biderketa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Zatiketa: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hondarra: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

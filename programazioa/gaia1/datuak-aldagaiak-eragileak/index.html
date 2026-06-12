@@ -1,0 +1,1866 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://RomanOlea.github.io/apuntes-programacion/programazioa/gaia1/datuak-aldagaiak-eragileak/">
+      
+      
+        <link rel="prev" href="../java-programazio-lengoaia/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1.3 — Datuak, aldagaiak eta eragileak - Apuntes Programación 1º DAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#javaren-eraikuntza-blokeak-datuak-aldagaiak-eta-eragileak" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Apuntes Programación 1º DAM" class="md-header__button md-logo" aria-label="Apuntes Programación 1º DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Programación 1º DAM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.3 — Datuak, aldagaiak eta eragileak
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hasiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../programazio-oinarriak/" class="md-tabs__link">
+          
+  
+  
+  Programazioa
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes Programación 1º DAM" class="md-nav__button md-logo" aria-label="Apuntes Programación 1º DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes Programación 1º DAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programazioa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programazioa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gaia 1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gaia 1 — Programazio Oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programazio-oinarriak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-programazio-lengoaia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 — Java Programazio Lengoaia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 — Datuak, aldagaiak eta eragileak
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 — Datuak, aldagaiak eta eragileak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-datuak-memoria-kaxetan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Datuak Memoria-Kaxetan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-aldagaien-bizitza-zikloa-eta-arauak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aldagaien Bizitza-Zikloa eta Arauak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Aldagaien Bizitza-Zikloa eta Arauak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bizitza-zikloa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bizitza-zikloa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#izendatzeko-arauak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Izendatzeko Arauak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zenbakizko-jatorrizko-motak-primitive-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Zenbakizko Jatorrizko Motak (Primitive Types)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Zenbakizko Jatorrizko Motak (Primitive Types)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zenbaki-osoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zenbaki Osoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zenbaki-hamartarrak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zenbaki Hamartarrak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-karaktereak-eta-boolearrak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Karaktereak eta Boolearrak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-erreferentzia-motak-objektuak-eta-metodoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Erreferentzia Motak: Objektuak eta Metodoak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Erreferentzia Motak: Objektuak eta Metodoak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-erreferentzia-motarik-ohikoena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String: Erreferentzia Motarik Ohikoena
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-irismena-scope-blokeen-mugak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Irismena (Scope): Blokeen Mugak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-konstanteak-balio-aldaezinak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Konstanteak: Balio Aldaezinak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-eragile-aritmetikoak-eta-esleipenak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Eragile Aritmetikoak eta Esleipenak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Eragile Aritmetikoak eta Esleipenak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eragile-aritmetikoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eragile Aritmetikoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eragile-unarioak-eta-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eragile Unarioak: ++ eta --
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esleipen-eragileak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esleipen Eragileak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-eragile-erlazionalak-eta-logikoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Eragile Erlazionalak eta Logikoak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Eragile Erlazionalak eta Logikoak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erlazionalak-balioak-alderatzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erlazionalak — Balioak Alderatzeko
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logikoak-kondizio-anitzak-elkartzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logikoak — Kondizio Anitzak Elkartzeko
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-lehentasunen-piramidea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Lehentasunen Piramidea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-adibide-osoa-piezak-ahokatzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Adibide Osoa: Piezak Ahokatzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-ariketak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Ariketak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontzeptuen-laburpen-taula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontzeptuen Laburpen-Taula
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-scanner.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 — GEHIGARRI - Java Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mota-bihurketa.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5 — GEHIGARRI - Mota bihurketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../konstanteak.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.6 — GEHIGARRI - Konstanteak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-datuak-memoria-kaxetan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Datuak Memoria-Kaxetan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-aldagaien-bizitza-zikloa-eta-arauak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Aldagaien Bizitza-Zikloa eta Arauak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Aldagaien Bizitza-Zikloa eta Arauak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bizitza-zikloa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bizitza-zikloa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#izendatzeko-arauak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Izendatzeko Arauak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-zenbakizko-jatorrizko-motak-primitive-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Zenbakizko Jatorrizko Motak (Primitive Types)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Zenbakizko Jatorrizko Motak (Primitive Types)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zenbaki-osoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zenbaki Osoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zenbaki-hamartarrak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zenbaki Hamartarrak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-karaktereak-eta-boolearrak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Karaktereak eta Boolearrak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-erreferentzia-motak-objektuak-eta-metodoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Erreferentzia Motak: Objektuak eta Metodoak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Erreferentzia Motak: Objektuak eta Metodoak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-erreferentzia-motarik-ohikoena" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String: Erreferentzia Motarik Ohikoena
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-irismena-scope-blokeen-mugak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Irismena (Scope): Blokeen Mugak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-konstanteak-balio-aldaezinak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Konstanteak: Balio Aldaezinak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-eragile-aritmetikoak-eta-esleipenak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Eragile Aritmetikoak eta Esleipenak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Eragile Aritmetikoak eta Esleipenak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eragile-aritmetikoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eragile Aritmetikoak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eragile-unarioak-eta-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eragile Unarioak: ++ eta --
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esleipen-eragileak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Esleipen Eragileak
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-eragile-erlazionalak-eta-logikoak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Eragile Erlazionalak eta Logikoak
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Eragile Erlazionalak eta Logikoak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erlazionalak-balioak-alderatzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Erlazionalak — Balioak Alderatzeko
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logikoak-kondizio-anitzak-elkartzeko" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logikoak — Kondizio Anitzak Elkartzeko
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-lehentasunen-piramidea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Lehentasunen Piramidea
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-adibide-osoa-piezak-ahokatzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Adibide Osoa: Piezak Ahokatzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-ariketak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Ariketak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontzeptuen-laburpen-taula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontzeptuen Laburpen-Taula
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="javaren-eraikuntza-blokeak-datuak-aldagaiak-eta-eragileak">Javaren Eraikuntza-Blokeak: Datuak, Aldagaiak eta Eragileak</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Zer ikasiko duzu gai honetan?</p>
+<p>Gai honetan Java programen oinarrizko osagaiak ikasiko ditugu: aldagaiak nola deklaratu eta erabiltzen diren, zein datu mota dauden, konstanteak zer diren, eta eragileak nola funtzionatzen duten. Hauek dira edozein programa idazteko ezinbesteko eraikuntza-blokeak.</p>
+</div>
+<p>📄 <a href="recursos/G.1.2-Datuak.pdf">Teoria PDF formatuan deskargatu</a></p>
+<hr />
+<h2 id="1-datuak-memoria-kaxetan">1. Datuak Memoria-Kaxetan</h2>
+<p>Programa guztiek datuak erabiltzen dituzte. Datu horiek <strong>aldagaietan</strong> gordetzen dira — memoria-sistemako edukiontzi izendatuetan.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>  int        adina       =        20        ;
+   │           │          │        │         │
+   │           │          │        │         └── Sententziaren amaiera
+   │           │          │        └── Balioa (kaxaren edukia)
+   │           │          └── Esleipena (sartu ekintza)
+   │           └── Identifikatzailea (kaxaren izena)
+   └── Mota (zer sartu daiteke kaxan?)
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Analogia</p>
+<p>Aldagai bat etiketa duen kaxa bat da. <code>int</code> kaxak zenbaki osoak bakarrik onartzen ditu. <code>String</code> kaxak testu kateak gordetzen ditu.</p>
+</div>
+<hr />
+<h2 id="2-aldagaien-bizitza-zikloa-eta-arauak">2. Aldagaien Bizitza-Zikloa eta Arauak</h2>
+<h3 id="bizitza-zikloa">Bizitza-zikloa</h3>
+<p>Aldagai bat erabiltzeko bi urrats jarraitu behar dira:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Deklarazioa: kaxaren mota eta izena adierazi</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="p">;</span>
+
+<span class="c1">// 2. Hasieratzea: balioa sartu</span>
+<span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+
+<span class="c1">// Edo biak batera:</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">altuera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.65</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="izendatzeko-arauak">Izendatzeko Arauak</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Araua</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅</td>
+<td>Hizki txikiz hasi beti</td>
+<td><code>adina</code>, <code>pisua</code></td>
+</tr>
+<tr>
+<td>✅</td>
+<td>Deskribatzailea izan</td>
+<td><code>erabiltzaileIzena</code> ez <code>ei</code></td>
+</tr>
+<tr>
+<td>✅</td>
+<td>camelCase hitz anitzetan</td>
+<td><code>batezBestekoNota</code></td>
+</tr>
+<tr>
+<td>❌</td>
+<td>Hitz erreserbatuak ez erabili</td>
+<td><code>class</code>, <code>public</code>, <code>int</code>...</td>
+</tr>
+<tr>
+<td>❌</td>
+<td>Zenbakiz hasi ezin</td>
+<td><code>1adina</code> ❌</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Java case-sensitive da</p>
+<p><code>adina</code>, <code>Adina</code> eta <code>ADINA</code> hiru aldagai <strong>desberdin</strong> dira Java-n.</p>
+</div>
+<hr />
+<h2 id="3-zenbakizko-jatorrizko-motak-primitive-types">3. Zenbakizko Jatorrizko Motak (Primitive Types)</h2>
+<p>Jatorrizko motek balioa zuzenean memorian gordetzen dute. Datu-mota bakoitzak edukiera zehatz bat dauka.</p>
+<h3 id="zenbaki-osoak">Zenbaki Osoak</h3>
+<table>
+<thead>
+<tr>
+<th>Mota</th>
+<th>Tamaina</th>
+<th>Balioen tartea</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>8 bit</td>
+<td>-128 → 127</td>
+<td><code>byte txikia = 120;</code></td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16 bit</td>
+<td>-32.768 → 32.767</td>
+<td><code>short motza = 32000;</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>32 bit</td>
+<td>-2.147M → 2.147M</td>
+<td><code>int zenbakia = 25000;</code></td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64 bit</td>
+<td>Oso handia</td>
+<td><code>long handi = 1000000000L;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Zein erabili?</p>
+<p>Gehienetan <strong><code>int</code></strong> nahikoa da. <code>long</code> erabili zenbaki oso handietarako — eta <code>L</code> letra gehitu behar zaio: <code>1000000000L</code></p>
+</div>
+<h3 id="zenbaki-hamartarrak">Zenbaki Hamartarrak</h3>
+<table>
+<thead>
+<tr>
+<th>Mota</th>
+<th>Tamaina</th>
+<th>Zehaztasuna</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>float</code></td>
+<td>32 bit</td>
+<td>6-7 digitu</td>
+<td><code>float altuera = 1.75f;</code></td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64 bit</td>
+<td>15-16 digitu (<strong>lehenetsia</strong>)</td>
+<td><code>double pisua = 72.5;</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">float-ek <code>f</code> behar du</p>
+<p><code>float altuera = 1.75f;</code> — <code>f</code> letra ahazten bada konpilazio-errorea jasoko duzu.</p>
+</div>
+<hr />
+<h2 id="4-karaktereak-eta-boolearrak">4. Karaktereak eta Boolearrak</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Karaktereak (char)</label><label for="__tabbed_1_2">Boolearrak (boolean)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Karaktere <strong>bakarra</strong> gordetzen du. Komatxo <strong>sinpleak</strong> erabili behar dira:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">letra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">zenbakia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;5&#39;</span><span class="p">;</span><span class="w">   </span><span class="c1">// &#39;5&#39; karakterea da, ez 5 zenbakia</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">zuriunea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Komatxo sinpleak vs bikoitzak</p>
+<ul>
+<li><code>char letra = 'A';</code>  ✅ Karaktere bat — komatxo sinpleak</li>
+<li><code>String hitza = "Ane";</code>  ✅ Testu katea — komatxo bikoitzak</li>
+<li><code>char letra = "A";</code>  ❌ Errorea — char-ak komatxo sinpleak behar ditu</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Bi balio posible bakarrik ditu: <code>true</code> (egia) edo <code>false</code> (faltsua).</p>
+<div class="highlight"><pre><span></span><code><span class="kt">boolean</span><span class="w"> </span><span class="n">ikasleaDa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">gainditua</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">adultua</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">adina</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="p">);</span><span class="w">  </span><span class="c1">// konparaketa baten emaitza</span>
+</code></pre></div>
+<p>Baldintzetarako eta begiztetarako ezinbestekoa da.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="5-erreferentzia-motak-objektuak-eta-metodoak">5. Erreferentzia Motak: Objektuak eta Metodoak</h2>
+<p>Erreferentzia motek ez dute balioa zuzenean gordetzen — <strong>memoriako helbidea</strong> gordetzen dute.</p>
+<div class="highlight"><pre><span></span><code>Primitiboa:                    Erreferentzia:
+┌─────────────┐                ┌─────────────┐
+│  int adina  │                │String izena │
+│     18      │                │   ────────►  │──► [ &quot;Ane&quot; ]
+└─────────────┘                └─────────────┘
+  Balioa zuzenean                Helbidea → objektua
+</code></pre></div>
+<h3 id="string-erreferentzia-motarik-ohikoena">String: Erreferentzia Motarik Ohikoena</h3>
+<p><code>String</code> karaktere-katea da, eta barnean <strong>metodoak</strong> dakartzana:</p>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Ane&quot;</span><span class="p">;</span>
+
+<span class="c1">// String-en metodo erabilienak</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">izena</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w">        </span><span class="c1">// 3 → luzera</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">izena</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span><span class="w">   </span><span class="c1">// ANE → maiuskulak</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">izena</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">());</span><span class="w">   </span><span class="c1">// ane → minuskulak</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">izena</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w">       </span><span class="c1">// A → lehen karakterea</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">izena</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;ne&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// true → azpikatea</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Metodoa</th>
+<th>Zer egiten du</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.length()</code></td>
+<td>Luzeraren zenbakia itzultzen du</td>
+<td><code>"Ane".length()</code> → <code>3</code></td>
+</tr>
+<tr>
+<td><code>.toUpperCase()</code></td>
+<td>Maiuskuletara bihurtzen du</td>
+<td><code>"ane".toUpperCase()</code> → <code>"ANE"</code></td>
+</tr>
+<tr>
+<td><code>.toLowerCase()</code></td>
+<td>Minuskuletara bihurtzen du</td>
+<td><code>"ANE".toLowerCase()</code> → <code>"ane"</code></td>
+</tr>
+<tr>
+<td><code>.charAt(i)</code></td>
+<td>i. posizioko karakterea itzultzen du</td>
+<td><code>"Ane".charAt(0)</code> → <code>'A'</code></td>
+</tr>
+<tr>
+<td><code>.contains(s)</code></td>
+<td>Azpikatea badagoen egiaztatzen du</td>
+<td><code>"Ane".contains("ne")</code> → <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-irismena-scope-blokeen-mugak">6. Irismena (Scope): Blokeen Mugak</h2>
+<p>Aldagai bat deklaratzen den <code>{ }</code> giltzen barruan bakarrik da erabilgarria. Blokea amaitzean, <strong>aldagai lokalak suntsitu egiten dira</strong>.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Batu</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w">          </span><span class="c1">// Klasearen aldagaia — denentzat eskuragarri</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">;</span><span class="w">             </span><span class="c1">// Aldagai lokala — main barruan bakarrik</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n1</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ n1 eskuragarri dago</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n2</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ n2 eskuragarri dago</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// System.out.println(n2);   // ❌ Errorea! n2 hemen ez dago</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Arau praktikoa</p>
+<p>Aldagaia ahalik eta <strong>txikieneko irismenekin</strong> deklaratu. Metodo barruan behar bada, bertan deklaratu.</p>
+</div>
+<hr />
+<h2 id="7-konstanteak-balio-aldaezinak">7. Konstanteak: Balio Aldaezinak</h2>
+<p>Konstanteak <strong>behin deklaratuta ezin dira aldatu</strong>. <code>final</code> hitza erabiltzen da, eta maiuskulaz idazten dira beti.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592</span><span class="p">;</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">BEZ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">21</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Erabilera adibidea:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">erradioa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">azalera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">erradioa</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">erradioa</span><span class="p">;</span><span class="w">   </span><span class="c1">// ✅</span>
+<span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w">                                    </span><span class="c1">// ❌ Error: cannot assign a value to final variable PI</span>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Zergatik erabili konstanteak?</p>
+<ul>
+<li>Balio garrantzitsu bat aldatzen bada, leku bakarrean aldatu behar da</li>
+<li>Kodea irakurterrazagoa egiten du (<code>PI</code> <code>3.141592</code> baino argiagoa da)</li>
+<li>Akatsak ekiditen laguntzen du</li>
+</ul>
+</div>
+<hr />
+<h2 id="8-eragile-aritmetikoak-eta-esleipenak">8. Eragile Aritmetikoak eta Esleipenak</h2>
+<h3 id="eragile-aritmetikoak">Eragile Aritmetikoak</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 13 → Batuketa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 7  → Kenketa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 30 → Biderketa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 3  → Zatiketa (osoa!)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// 1  → Hondarra / Modulua</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Osoko zatiketa</p>
+<p><code>10 / 3 = 3</code> Java-n, ez <code>3.33</code>. Dezimala nahi baduzu:
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">emaitza</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">   </span><span class="c1">// 3.333...</span>
+</code></pre></div></p>
+</div>
+<h3 id="eragile-unarioak-eta-">Eragile Unarioak: ++ eta --</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+
+<span class="n">m</span><span class="o">++</span><span class="p">;</span><span class="w">           </span><span class="c1">// m = 3 (ondoren handitu)</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">m</span><span class="o">++</span><span class="p">);</span><span class="w">   </span><span class="c1">// 3 erakutsi, gero m=4 bihurtu</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">++</span><span class="n">m</span><span class="p">);</span><span class="w">   </span><span class="c1">// lehenik m=5, gero 5 erakutsi</span>
+</code></pre></div>
+<h3 id="esleipen-eragileak">Esleipen Eragileak</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+
+<span class="n">num</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">    </span><span class="c1">// num = num + 5  → 15</span>
+<span class="n">num</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">    </span><span class="c1">// num = num - 3  → 12</span>
+<span class="n">num</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">    </span><span class="c1">// num = num * 2  → 24</span>
+<span class="n">num</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c1">// num = num / 4  → 6</span>
+<span class="n">num</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c1">// num = num % 4  → 2</span>
+</code></pre></div>
+<p><code>num += 5</code> idaztea <code>num = num + 5</code> idaztea bezalakoa da — laburpena besterik ez.</p>
+<hr />
+<h2 id="9-eragile-erlazionalak-eta-logikoak">9. Eragile Erlazionalak eta Logikoak</h2>
+<h3 id="erlazionalak-balioak-alderatzeko">Erlazionalak — Balioak Alderatzeko</h3>
+<p>Beti <code>boolean</code> balio bat itzultzen dute (<code>true</code> edo <code>false</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">    </span><span class="c1">// true  → handiagoa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">    </span><span class="c1">// false → txikiagoa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true  → handiagoa edo berdina</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// false → txikiagoa edo berdina</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// false → berdinak dira?</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">   </span><span class="c1">// true  → ezberdinak dira?</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">= eta == ez nahastu</p>
+<ul>
+<li><code>=</code> → esleipena: <code>adina = 20;</code></li>
+<li><code>==</code> → konparaketa: <code>adina == 20</code></li>
+<li><code>adina = 20</code> idazteak balioa <strong>aldatzen</strong> du. <code>adina == 20</code> idazteak <strong>egiaztatzen</strong> du.</li>
+</ul>
+</div>
+<h3 id="logikoak-kondizio-anitzak-elkartzeko">Logikoak — Kondizio Anitzak Elkartzeko</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">ikaslea</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">adina</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">ikaslea</span><span class="p">);</span><span class="w">   </span><span class="c1">// true  → AND: biak true</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">adina</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">ikaslea</span><span class="p">);</span><span class="w">    </span><span class="c1">// true  → OR: bat true nahikoa</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="o">!</span><span class="n">ikaslea</span><span class="p">);</span><span class="w">                  </span><span class="c1">// false → NOT: alderantzizkoa</span>
+</code></pre></div>
+<p><strong>Egia-taula:</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A &amp;&amp; B</th>
+<th>A || B</th>
+<th>!A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-lehentasunen-piramidea">10. Lehentasunen Piramidea</h2>
+<p>Eragile anitz daudenean, Java-k lehentasun-ordenaren arabera exekutatzen ditu:</p>
+<div class="highlight"><pre><span></span><code>        ┌─────────────────────────┐
+    1   │     Parentesiak  ( )    │  ← Lehentasun gorena
+        ├─────────────────────────┤
+    2   │   Unarioak  ++, --, !   │
+        ├─────────────────────────┤
+    3   │   Biderketa / Zatiketa  │
+        │        *, /, %          │
+        ├─────────────────────────┤
+    4   │   Batuketa / Kenketa    │
+        │          +, -           │
+        ├─────────────────────────┤
+    5   │  Erlazionalak/Logikoak  │
+        │  &lt;, &gt;, &lt;=, &gt;=, ==, !=   │
+        │      &amp;&amp;, ||, !          │
+        ├─────────────────────────┤
+    6   │      Esleipenak  =      │  ← Lehentasun baxuena
+        └─────────────────────────┘
+</code></pre></div>
+<p><strong>Adibidea:</strong>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">emaitza</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">    </span><span class="c1">// 14, ez 20 — * lehenik exekutatzen da</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">emaitza</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w">  </span><span class="c1">// 20 — parentesiak lehentasuna aldatzen dute</span>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Arau praktikoa</p>
+<p>Zalantzarik bada, <strong>parentesiak erabili</strong> — kodea argiagoa eta seguruagoa egingo du.</p>
+</div>
+<hr />
+<h2 id="11-adibide-osoa-piezak-ahokatzen">11. Adibide Osoa: Piezak Ahokatzen</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Datuak</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// Datu mota jatorrizkoak</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">altuera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.72</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">ikasleaDa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Erreferentzia mota</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Jon&quot;</span><span class="p">;</span>
+
+<span class="w">        </span><span class="c1">// Pantailaratzea katea elkartzea (+) erabiliz</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Izena: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">izena</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adina: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">adina</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Altuera: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">altuera</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ikaslea da? &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ikasleaDa</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Emaitza:</strong>
+<div class="highlight"><pre><span></span><code>Izena: Jon
+Adina: 19
+Altuera: 1.72
+Ikaslea da? true
+</code></pre></div></p>
+<hr />
+<h2 id="12-ariketak">12. Ariketak</h2>
+<div class="admonition question">
+<p class="admonition-title">1. Ariketa — Sorkuntza</p>
+<p>Sortu programa bat zure izena (<code>String</code>), adina (<code>int</code>) eta altuera (<code>double</code>) aldagaietan gordeko dituena eta pantailaratuko dituena.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NireDatuak</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">izena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ZureIzena&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">altuera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.80</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">izena</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">adina</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">altuera</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">2. Ariketa — Kalkulua</p>
+<p>Kalkulatu zirkunferentziaren luzera <code>r=3</code> izanik. Formula: <code>luzera = 2 * PI * r</code>. Erabili <code>final</code> konstante bat PI-rentzat.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Zirkunferentzia</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.141592</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">luzera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Luzera: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">luzera</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">3. Ariketa — Konstanteen Legea</p>
+<p>Deklaratu <code>final double PI = 3.14159</code> konstante bat eta saiatu berari beste balio bat esleitzen. Zer errorea ematen du konpiladoreak?</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<p><div class="highlight"><pre><span></span><code><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14</span><span class="p">;</span><span class="w">  </span><span class="c1">// ❌ Error: cannot assign a value to final variable PI</span>
+</code></pre></div>
+<code>final</code> aldagaiak behin bakarrik esleitu daitezke. Gero ezin dira aldatu.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">4. Ariketa — Logika: Trukatze Erronka</p>
+<p>Trukatu bi aldagairen (<code>a = 5</code> eta <code>b = 10</code>) balioak <strong>hirugarren aldagairik gabe</strong>. Pista: eragile aritmetikoak erabili.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Trukatzea</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// a = 15</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// b = 5  (lehengo a)</span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// a = 10 (lehengo b)</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;a = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">);</span><span class="w">  </span><span class="c1">// 10</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;b = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// 5</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<hr />
+<h2 id="kontzeptuen-laburpen-taula">Kontzeptuen Laburpen-Taula</h2>
+<table>
+<thead>
+<tr>
+<th>Kontzeptua</th>
+<th>Sintaxia</th>
+<th>Adibidea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aldagaia</td>
+<td><code>&lt;mota&gt; &lt;izena&gt; = &lt;balioa&gt;;</code></td>
+<td><code>int adina = 20;</code></td>
+</tr>
+<tr>
+<td>Konstante</td>
+<td><code>final &lt;mota&gt; &lt;IZENA&gt; = &lt;balioa&gt;;</code></td>
+<td><code>final double PI = 3.14;</code></td>
+</tr>
+<tr>
+<td>Zenbaki osoa</td>
+<td><code>int</code>, <code>long</code>, <code>byte</code>, <code>short</code></td>
+<td><code>int n = 42;</code></td>
+</tr>
+<tr>
+<td>Dezimala</td>
+<td><code>double</code>, <code>float</code></td>
+<td><code>double d = 3.14;</code></td>
+</tr>
+<tr>
+<td>Karakterea</td>
+<td><code>char</code> (komatxo sinpleak)</td>
+<td><code>char c = 'A';</code></td>
+</tr>
+<tr>
+<td>Logikoa</td>
+<td><code>boolean</code></td>
+<td><code>boolean b = true;</code></td>
+</tr>
+<tr>
+<td>Testu katea</td>
+<td><code>String</code> (komatxo bikoitzak)</td>
+<td><code>String s = "Kaixo";</code></td>
+</tr>
+<tr>
+<td>Hondarra</td>
+<td><code>%</code></td>
+<td><code>10 % 3</code> → <code>1</code></td>
+</tr>
+<tr>
+<td>Berdintasuna</td>
+<td><code>==</code></td>
+<td><code>a == b</code></td>
+</tr>
+<tr>
+<td>Esleipena</td>
+<td><code>=</code></td>
+<td><code>a = 5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1771 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://RomanOlea.github.io/apuntes-programacion/programazioa/gaia1/java-programazio-lengoaia/">
+      
+      
+        <link rel="prev" href="../programazio-oinarriak/">
+      
+      
+        <link rel="next" href="../datuak-aldagaiak-eragileak/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1.2 — Java Programazio Lengoaia - Apuntes Programación 1º DAM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java-programazio-lengoaia" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Apuntes Programación 1º DAM" class="md-header__button md-logo" aria-label="Apuntes Programación 1º DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apuntes Programación 1º DAM
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.2 — Java Programazio Lengoaia
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hasiera
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../programazio-oinarriak/" class="md-tabs__link">
+          
+  
+  
+  Programazioa
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apuntes Programación 1º DAM" class="md-nav__button md-logo" aria-label="Apuntes Programación 1º DAM" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Apuntes Programación 1º DAM
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hasiera
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programazioa
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programazioa
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gaia 1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gaia 1 — Programazio Oinarriak
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../programazio-oinarriak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 — Programazio Oinarriak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 — Java Programazio Lengoaia
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 — Java Programazio Lengoaia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aurkezpena-pdf-formatuan-deskargatu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 Aurkezpena PDF formatuan deskargatu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-programazio-lengoaia-gizakiaren-eta-makinaren-arteko-zubia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Programazio Lengoaia: Gizakiaren eta Makinaren Arteko Zubia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programazio-lengoaien-maila" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Programazio Lengoaien Maila
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-java-ren-iraultza-write-once-run-anywhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Java-ren Iraultza: Write Once, Run Anywhere
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Java-ren Iraultza: Write Once, Run Anywhere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tradizionala-c-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tradizionala (C, C++)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-ren-irtenbidea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java-ren Irtenbidea
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-java-nola-funtzionatzen-den-konpilazioa-eta-interpretazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Java Nola Funtzionatzen Den: Konpilazioa eta Interpretazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-jdk-jre-eta-jvm-zer-behar-dugu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. JDK, JRE eta JVM: Zer Behar Dugu?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-jdk-ren-tresna-kutxa-kontsola-tresnak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. JDK-ren Tresna-kutxa: Kontsola Tresnak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-java-ren-ezaugarri-nagusiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Java-ren Ezaugarri Nagusiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-kodearen-arkitektura-fitxategi-fisikoen-kudeaketa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Kodearen Arkitektura: Fitxategi Fisikoen Kudeaketa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-lehen-programa-kaixo-mundua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Lehen Programa: Kaixo Mundua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Lehen Programa: Kaixo Mundua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#egitura-aztertuta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Egitura aztertuta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-metodoaren-hitzen-esanahia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        main metodoaren hitzen esanahia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemoutprintln-aztertuta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System.out.println aztertuta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-iruzkinak-javan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Iruzkinak Javan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-lan-fluxu-praktikoa-kode-batetik-exekuziora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Lan-fluxu Praktikoa: Kode batetik Exekuziora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-errore-ohikoenak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Errore Ohikoenak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ariketak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ariketak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontzeptuen-laburpen-taula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontzeptuen Laburpen-Taula
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datuak-aldagaiak-eragileak/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.3 — Datuak, aldagaiak eta eragileak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-scanner.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.4 — GEHIGARRI - Java Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mota-bihurketa.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.5 — GEHIGARRI - Mota bihurketa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../konstanteak.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.6 — GEHIGARRI - Konstanteak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aurkezpena-pdf-formatuan-deskargatu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📄 Aurkezpena PDF formatuan deskargatu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-programazio-lengoaia-gizakiaren-eta-makinaren-arteko-zubia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Programazio Lengoaia: Gizakiaren eta Makinaren Arteko Zubia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-programazio-lengoaien-maila" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Programazio Lengoaien Maila
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-java-ren-iraultza-write-once-run-anywhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Java-ren Iraultza: Write Once, Run Anywhere
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Java-ren Iraultza: Write Once, Run Anywhere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tradizionala-c-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tradizionala (C, C++)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#java-ren-irtenbidea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Java-ren Irtenbidea
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-java-nola-funtzionatzen-den-konpilazioa-eta-interpretazioa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Java Nola Funtzionatzen Den: Konpilazioa eta Interpretazioa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-jdk-jre-eta-jvm-zer-behar-dugu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. JDK, JRE eta JVM: Zer Behar Dugu?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-jdk-ren-tresna-kutxa-kontsola-tresnak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. JDK-ren Tresna-kutxa: Kontsola Tresnak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-java-ren-ezaugarri-nagusiak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Java-ren Ezaugarri Nagusiak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-kodearen-arkitektura-fitxategi-fisikoen-kudeaketa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Kodearen Arkitektura: Fitxategi Fisikoen Kudeaketa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-lehen-programa-kaixo-mundua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Lehen Programa: Kaixo Mundua
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Lehen Programa: Kaixo Mundua">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#egitura-aztertuta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Egitura aztertuta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main-metodoaren-hitzen-esanahia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        main metodoaren hitzen esanahia
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemoutprintln-aztertuta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System.out.println aztertuta
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-iruzkinak-javan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Iruzkinak Javan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-lan-fluxu-praktikoa-kode-batetik-exekuziora" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Lan-fluxu Praktikoa: Kode batetik Exekuziora
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-errore-ohikoenak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Errore Ohikoenak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ariketak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ariketak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kontzeptuen-laburpen-taula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontzeptuen Laburpen-Taula
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="java-programazio-lengoaia">Java Programazio Lengoaia</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Zer ikasiko duzu gai honetan?</p>
+<p>Gai honetan Java programazio-lengoaiaren oinarriak ikasiko ditugu: zer den programazio-lengoaia bat, nola funtzionatzen duen Java makinak, zein diren Java-ren ezaugarri nagusiak eta nola idazten eta exekutatzen den lehen programa. Hau 1. DAMeko programazioaren sarrera teorikoa da.</p>
+</div>
+<h2 id="aurkezpena-pdf-formatuan-deskargatu">📄 <a href="../G.1.1-Java_Programazio_Lengoaia.pdf">Aurkezpena PDF formatuan deskargatu</a></h2>
+<h2 id="1-programazio-lengoaia-gizakiaren-eta-makinaren-arteko-zubia">1. Programazio Lengoaia: Gizakiaren eta Makinaren Arteko Zubia</h2>
+<p>Ordenagailuak ez daki zer egin nahi dugun berez — aginduak eman behar dizkiogu. Baina ordenagailuak <strong>0 eta 1</strong> bakarrik ulertzen ditu. Hemen sartzen da programazio-lengoaia.</p>
+<div class="highlight"><pre><span></span><code>Gizakia                    Programazio Lengoaia                    Makina
+────────────────      ──────────────────────────────────      ──────────────
+Helburuak eta    →    Funtzio jakin bat betetzeko          →   Funtzionamendu
+arrazoibideak         ordenatutako agindu edo jarraibide        bitarra
+                      sorta bat. Ordenagailuari zer egin        (0 eta 1)
+                      behar duen esaten dion sekuentzia.
+</code></pre></div>
+<p><strong>Adibidea:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Gizakia nahi duena</th>
+<th>Java kodea</th>
+<th>Makinak ulertzen duena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sartu bi zenbaki eta batura erakutsi</td>
+<td><code>int batura = a + b;</code></td>
+<td><code>10110100 00000001...</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-programazio-lengoaien-maila">2. Programazio Lengoaien Maila</h2>
+<p>Hiru maila bereizten dira ordenagailuarekiko gertutasunaren arabera:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Kode Makina</label><label for="__tabbed_1_2">Assembler</label><label for="__tabbed_1_3">Java (Goi Mailako Lengoaia)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code>10110100
+00000001
+</code></pre></div>
+Ordenagailuak ulertzen duen hizkuntza bakarra. Konplexuegia gizakientzat — inork ez du zuzenean idazten.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w"> </span><span class="no">AX</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
+Agindu sinpleak (hitzak) erabiliz prozesadoreari hitz egiteko modu zuzena. Gizakiarentzat irakurgarriagoa, baina oraindik zaila.</p>
+</div>
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">zenbakia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+Gizakiontzat ulergarriagoa. Konpiladoreak edo interpreteak itzultzen du makina kodera automatikoki.</p>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Analogia</p>
+<p>Assembler eraikuntza-planoak dira (zehatzak baina konplexuak). Java arkitektoaren diseinua da (argia eta ulergarria). Biak eraikin bera deskribatzen dute, baina maila desberdinetan.</p>
+</div>
+<hr />
+<h2 id="3-java-ren-iraultza-write-once-run-anywhere">3. Java-ren Iraultza: Write Once, Run Anywhere</h2>
+<p>Lengoaia tradizionalek (C, C++) arazo bat zuten: sistema eragile bakoitzerako konpilazio desberdina behar zen.</p>
+<h3 id="tradizionala-c-c">Tradizionala (C, C++)</h3>
+<div class="highlight"><pre><span></span><code>Iturburu-kodea
+      │
+      ├── Konpilazioa → Linux Exekutagarria
+      ├── Konpilazioa → Windows Exekutagarria
+      └── Konpilazioa → Mac Exekutagarria
+</code></pre></div>
+<p>Makina bakoitzerako konpilazio desberdina behar da.</p>
+<h3 id="java-ren-irtenbidea">Java-ren Irtenbidea</h3>
+<div class="highlight"><pre><span></span><code>holamundo.java
+      │
+      ▼
+  Konpilazioa (javac)
+      │
+      ▼
+holamundo.class (Bytecode)
+      │
+      ├── Linux  + JVM → ✅ Exekutatu
+      ├── Windows + JVM → ✅ Exekutatu
+      └── Mac    + JVM → ✅ Exekutatu
+</code></pre></div>
+<div class="admonition success">
+<p class="admonition-title">Behin idatzi, edonon exekutatu</p>
+<p><strong>Write Once, Run Anywhere</strong> — Java-ren filosofia nagusia. JVM (Java Virtual Machine) instalatuta dagoen edozein makinatan exekutatu daiteke programa bera.</p>
+</div>
+<hr />
+<h2 id="4-java-nola-funtzionatzen-den-konpilazioa-eta-interpretazioa">4. Java Nola Funtzionatzen Den: Konpilazioa eta Interpretazioa</h2>
+<p>Java-k bi urrats erabiltzen ditu zure kodea exekutatzeko:</p>
+<div class="highlight"><pre><span></span><code>.java fitxategia          Konpiladorea (javac)        .class fitxategia         Interpretea (JVM)
+────────────────    →    ──────────────────────   →   ─────────────────   →    ──────────────────
+Iturburu-kodea           Programa osoa itzultzen       Bytecode                 Bytecode-a lerroz
+(guk idatzitakoa)        du Java kodetik bytecode-ra   (tarteko kodea)          lerro interpretatzen
+                                                                                du eta exekutatzen du
+                                                                                        │
+                                                                                 ┌──────┼──────┐
+                                                                              Windows Linux  Mac
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Urratsa</th>
+<th>Tresna</th>
+<th>Zer egiten du</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Konpilazioa</td>
+<td><code>javac</code></td>
+<td><code>.java</code> fitxategia <code>bytecode</code>-ra itzultzen du</td>
+</tr>
+<tr>
+<td>2. Exekuzioa</td>
+<td><code>java</code> (JVM)</td>
+<td><code>bytecode</code>-a lerroz lerro interpretatzen du</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Bytecode-a</p>
+<p>Bytecode-a ez da kode makina (0 eta 1 hutsak) baina ez da goi mailako kodea ere. Tarteko hizkuntza bat da, JVM-ak ulertzeko prestatua, plataforma guztietarako berdina dena.</p>
+</div>
+<hr />
+<h2 id="5-jdk-jre-eta-jvm-zer-behar-dugu">5. JDK, JRE eta JVM: Zer Behar Dugu?</h2>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│                  JDK (Java Development Kit)              │
+│  Programatzaileen tresnak. Aplikazioak sortzeko eta      │
+│  garatzeko behar dena (konpiladoreak, araizketa tresnak) │
+│                                                          │
+│   ┌───────────────────────────────────────────────────┐  │
+│   │           JRE (Java Runtime Environment)          │  │
+│   │  Exekuzio-ingurunea. Java aplikazio bat           │  │
+│   │  exekutatzeko soilik behar diren osagaiak         │  │
+│   │                                                   │  │
+│   │   ┌─────────────────────────────────────────────┐ │  │
+│   │   │         JVM (Java Virtual Machine)          │ │  │
+│   │   │  Makina birtuala. Bytecode-a ulertu eta     │ │  │
+│   │   │  prozesadorearen agindu bihurtzen duen      │ │  │
+│   │   │  motorra. Klase liburutegiak ere            │ │  │
+│   │   │  hemen biltzen dira.                        │ │  │
+│   │   └─────────────────────────────────────────────┘ │  │
+│   └───────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────┘
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Osagaia</th>
+<th>Nork behar du</th>
+<th>Zertarako</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JVM</strong></td>
+<td>Denek</td>
+<td>Java programak exekutatzeko motor minimoa</td>
+</tr>
+<tr>
+<td><strong>JRE</strong></td>
+<td>Erabiltzaile arruntek</td>
+<td>Java aplikazioak exekutatzeko (JVM + liburutegiak)</td>
+</tr>
+<tr>
+<td><strong>JDK</strong></td>
+<td>Programatzaileek</td>
+<td>Java kodea idazteko eta konpilatzeko (JRE + tresnak)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Laburpena</p>
+<p>Programatzaile bezala <strong>JDK</strong> erabili behar dugu beti. JDK-k JRE eta JVM barne hartzen ditu.</p>
+</div>
+<hr />
+<h2 id="6-jdk-ren-tresna-kutxa-kontsola-tresnak">6. JDK-ren Tresna-kutxa: Kontsola Tresnak</h2>
+<p>JDK instalatzean tresna multzo bat eskuratzen dugu terminaletik erabiltzeko:</p>
+<table>
+<thead>
+<tr>
+<th>Komandoa</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>javac</code></td>
+<td>Javaren konpiladorea. <code>.java</code> fitxategiak <code>.class</code>-era biltzen ditu</td>
+</tr>
+<tr>
+<td><code>java</code></td>
+<td>Javaren makina birtuala (exekuzio motorra)</td>
+</tr>
+<tr>
+<td><code>javap</code></td>
+<td>Klase-desmihiztatzaile (desensablador) bat da</td>
+</tr>
+<tr>
+<td><code>jdb</code></td>
+<td>Javako kontsola araztegia (depurador) akatsak aurkitzeko</td>
+</tr>
+<tr>
+<td><code>javadoc</code></td>
+<td>Dokumentazio-sortzailea da</td>
+</tr>
+<tr>
+<td><code>appletviewer</code></td>
+<td>Applet-ak ikusteko tresna</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Erabilera adibidea:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Konpilatu</span>
+javac<span class="w"> </span>Kaixo.java<span class="w">        </span>→<span class="w"> </span>Kaixo.class<span class="w"> </span>sortzen<span class="w"> </span>du
+
+<span class="c1"># 2. Exekutatu</span>
+java<span class="w"> </span>Kaixo<span class="w">              </span>→<span class="w"> </span>Programa<span class="w"> </span>exekutatzen<span class="w"> </span>du
+</code></pre></div>
+<hr />
+<h2 id="7-java-ren-ezaugarri-nagusiak">7. Java-ren Ezaugarri Nagusiak</h2>
+<table>
+<thead>
+<tr>
+<th>Ezaugarria</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multiplataforma</strong></td>
+<td>Sistemaren araberakoa ez da — JVM egonda berdin funtzionatzen du</td>
+</tr>
+<tr>
+<td><strong>Objektuei Zuzendurikoa</strong></td>
+<td>Programak objektuetan eta klaseetan antolatzen dira</td>
+</tr>
+<tr>
+<td><strong>Segurtasuna</strong></td>
+<td>Memoria ez dugu zuzenean manipulatzen — JVM arduratzen da horretaz</td>
+</tr>
+<tr>
+<td><strong>Liburutegi Ugari</strong></td>
+<td>Aurrez eraikitako klase asko ditu eskuragarri (<code>String</code>, <code>Scanner</code>, <code>Math</code>)</td>
+</tr>
+<tr>
+<td><strong>Komunitate Handia</strong></td>
+<td>Oso erabilia da — dokumentazio eta baliabide ugari ditu mundu mailan</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-kodearen-arkitektura-fitxategi-fisikoen-kudeaketa">8. Kodearen Arkitektura: Fitxategi Fisikoen Kudeaketa</h2>
+<p>Java programa batek hainbat fitxategi izan ditzake. Konpilazioak fitxategi bakoitzarentzat <code>.class</code> bat sortzen du:</p>
+<div class="highlight"><pre><span></span><code>Iturburu Kodea              Konpilazioa              Aplikazioa
+──────────────────                 │              ──────────────────
+  C1.java                          │                  C1.class
+  C2.java          ───────────────►│◄───────────────  C2.class
+  Cmain.java                       │                  Cmain.class
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Exekuzioa: main() metodoa duen klasetik hasten da</span>
+java<span class="w"> </span>Cmain
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Fitxategien banaketa</p>
+<p>Konpilatutako <code>.class</code> fitxategiek ez dute zertan direktorio jakin batean egon — makinatan banatuta egon daitezke. Hau da Java-ren banaketa-arkitekturaren oinarria.</p>
+</div>
+<hr />
+<h2 id="9-lehen-programa-kaixo-mundua">9. Lehen Programa: Kaixo Mundua</h2>
+<h3 id="egitura-aztertuta">Egitura aztertuta</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kaixo</span><span class="w"> </span><span class="p">{</span><span class="w">                              </span><span class="c1">// ①</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span><span class="c1">// ②</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kaixo Mundua!&quot;</span><span class="p">);</span><span class="w">      </span><span class="c1">// ③</span>
+<span class="w">    </span><span class="p">}</span><span class="w">                                             </span><span class="c1">// ④</span>
+<span class="p">}</span><span class="w">                                                 </span><span class="c1">// ⑤</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Zenbakia</th>
+<th>Zatia</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><code>public class Kaixo</code></td>
+<td>Fitxategiaren kanpotik erabil daitekeen aldatzailea. Klase izena eta fitxategi izena berdinak izan behar dira</td>
+</tr>
+<tr>
+<td>②</td>
+<td><code>public static void main(String[] args)</code></td>
+<td>Programaren hasierako puntua. JVM-ak beti metodo hau bilatzen du exekuzioa hasteko</td>
+</tr>
+<tr>
+<td>③</td>
+<td><code>System.out.println(...)</code></td>
+<td>Testua erakusten duen metodoa. <code>;</code> ezinbestekoa</td>
+</tr>
+<tr>
+<td>④</td>
+<td><code>}</code></td>
+<td><code>main</code> metodoaren amaiera</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><code>}</code></td>
+<td>Klasearen amaiera</td>
+</tr>
+</tbody>
+</table>
+<h3 id="main-metodoaren-hitzen-esanahia"><code>main</code> metodoaren hitzen esanahia</h3>
+<table>
+<thead>
+<tr>
+<th>Hitza</th>
+<th>Esanahia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>public</code></td>
+<td>Edonondik (baita JVMtik ere) deitu ahal izateko</td>
+</tr>
+<tr>
+<td><code>static</code></td>
+<td>Klaseko objekturik sortu gabe zuzenean dei dakioke</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td>Metodo honek ez du inongo baliorik itzultzen amaitzean</td>
+</tr>
+<tr>
+<td><code>main</code></td>
+<td>Programaren hasierako puntua. JVM-ak beti metodo hau bilatzen du</td>
+</tr>
+<tr>
+<td><code>String[] args</code></td>
+<td>Kanpotik (kontsolatik) pasatzen zaizkion parametroak onartzeko</td>
+</tr>
+</tbody>
+</table>
+<h3 id="systemoutprintln-aztertuta"><code>System.out.println</code> aztertuta</h3>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kaixo Mundua!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w">    </span><span class="err">│</span><span class="w">              </span><span class="err">│</span>
+<span class="w">  </span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w">    </span><span class="err">│</span><span class="w">              </span><span class="err">└──</span><span class="w"> </span><span class="n">Erakutsi</span><span class="w"> </span><span class="n">nahi</span><span class="w"> </span><span class="n">dugun</span><span class="w"> </span><span class="n">testu</span><span class="w"> </span><span class="n">katea</span>
+<span class="w">  </span><span class="err">│</span><span class="w">      </span><span class="err">│</span><span class="w">    </span><span class="err">└──</span><span class="w"> </span><span class="n">Testua</span><span class="w"> </span><span class="n">erakusten</span><span class="w"> </span><span class="n">duen</span><span class="w"> </span><span class="nf">metodoa</span><span class="w"> </span><span class="p">(</span><span class="n">lerro</span><span class="o">-</span><span class="n">itzulera</span><span class="w"> </span><span class="n">egiten</span><span class="w"> </span><span class="n">du</span><span class="p">)</span>
+<span class="w">  </span><span class="err">│</span><span class="w">      </span><span class="err">└──</span><span class="w"> </span><span class="n">Pantailako</span><span class="w"> </span><span class="n">informazioa</span><span class="w"> </span><span class="n">ateratzeko</span><span class="w"> </span><span class="n">atributua</span>
+<span class="w">  </span><span class="err">└──</span><span class="w"> </span><span class="n">Programa</span><span class="w"> </span><span class="n">bateko</span><span class="w"> </span><span class="n">edozein</span><span class="w"> </span><span class="n">puntutatik</span><span class="w"> </span><span class="n">dei</span><span class="w"> </span><span class="n">daitekeena</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Puntu eta koma ezinbestekoa</p>
+<p>Javako agindu guztiak <strong>puntu eta komaz</strong> amaitzen dira (<code>;</code>), giltza-itxiturak izan ezik. Ahaztu ezkero konpilazio-errorea jasoko duzu.</p>
+</div>
+<hr />
+<h2 id="10-iruzkinak-javan">10. Iruzkinak Javan</h2>
+<p>Iruzkinak konpiladoreak <strong>ez ditu kontuan hartzen</strong> — programatzaileentzat idatzitako oharrak dira.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * @author Irakaslea</span>
+<span class="cm"> * This is a sample class for demonstration.</span>
+<span class="cm"> */</span><span class="w">                                          </span><span class="err">←</span><span class="w"> </span><span class="n">Javadoc</span><span class="p">:</span><span class="w"> </span><span class="n">dokumentazio</span><span class="w"> </span><span class="n">ofiziala</span><span class="w"> </span><span class="n">sortzeko</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KodeaAdibidea</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     * This is a multi-line comment</span>
+<span class="cm">     * spanning across several lines</span>
+<span class="cm">     * for explanation.</span>
+<span class="cm">     */</span><span class="w">                                      </span><span class="err">←</span><span class="w"> </span><span class="n">Lerro</span><span class="w"> </span><span class="n">anitzekoa</span><span class="p">:</span><span class="w"> </span><span class="n">bloke</span><span class="w"> </span><span class="n">osoak</span><span class="w"> </span><span class="n">hartzen</span><span class="w"> </span><span class="n">ditu</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Hau iruzkin bat da    ← Lerro bakarrekoa: lerroaren amaierara arte</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span><span class="w"> </span><span class="cm">/* Another comment */</span>
+
+<span class="w">        </span><span class="c1">// Calculate sum</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Mota</th>
+<th>Sintaxia</th>
+<th>Erabilera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lerro bakarrekoa</strong></td>
+<td><code>// testua</code></td>
+<td>Azalpen laburrak, kode ondoan</td>
+</tr>
+<tr>
+<td><strong>Lerro anitzekoa</strong></td>
+<td><code>/* testua */</code></td>
+<td>Azalpen luzeak, bloke osoak</td>
+</tr>
+<tr>
+<td><strong>Javadoc</strong></td>
+<td><code>/** testua */</code></td>
+<td>Dokumentazio ofiziala sortzeko (<code>@author</code>, <code>@param</code>...)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="11-lan-fluxu-praktikoa-kode-batetik-exekuziora">11. Lan-fluxu Praktikoa: Kode batetik Exekuziora</h2>
+<div class="highlight"><pre><span></span><code>1. Fitxategia Sortu    2. Kodea Idatzi         3. Konpilatu eta        4. Aldatu
+                                                  Exekutatu
+Sortu Kaixo.java  →   public class Kaixo {  →  javac Kaixo.java    →  Aldatu mezua eta
+fitxategia IDE        public static void        java Kaixo              errepikatu
+batean                main(String[] args) {     JVM-ak magia egingo     prozesua
+                        System.out.println      du eta kontsolan
+                        (&quot;Kaixo ikasleak!&quot;);    mezua agertuko da
+                      }
+                    }
+</code></pre></div>
+<p><strong>Praktikan VS Code-rekin:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Terminal batean</span>
+javac<span class="w"> </span>Kaixo.java<span class="w">    </span><span class="c1"># Konpilatu</span>
+java<span class="w"> </span>Kaixo<span class="w">          </span><span class="c1"># Exekutatu</span>
+</code></pre></div>
+<hr />
+<h2 id="12-errore-ohikoenak">12. Errore Ohikoenak</h2>
+<div class="admonition failure">
+<p class="admonition-title">Fitxategi izena eta klase izena ez datoz bat</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// Fitxategia: Kaixo.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Agur</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// ❌ Errorea!</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Kaixo</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// ✅ Zuzena</span>
+</code></pre></div>
+Konpiladoreak errorea emango du — <strong>lotura arkitektonikoa</strong> apurtzen delako.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">main metodotik public hitza kendu</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// ❌</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// ✅</span>
+</code></pre></div>
+JVM-ak ezingo luke aurkitu — hasierako atea pribatu bihurtuko litzatekeelako.</p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Puntu eta koma ahaztu</p>
+<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kaixo&quot;</span><span class="p">)</span><span class="w">    </span><span class="c1">// ❌ ; falta</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kaixo&quot;</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✅</span>
+</code></pre></div>
+</div>
+<div class="admonition quote">
+<p><em>"Kodea ez da bakarrik idazten — arkitektura bat bezala diseinatzen da."</em></p>
+</div>
+<hr />
+<h2 id="ariketak">Ariketak</h2>
+<div class="admonition question">
+<p class="admonition-title">1. Ariketa — Konpilazioa eta exekuzioa</p>
+<p>Sortu <code>KaixoIkasleak.java</code> fitxategi bat <code>Kaixo ikasleak!</code> mezua pantailaratzen duena. Konpilatu eta exekutatu terminaletik.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">KaixoIkasleak</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Kaixo ikasleak!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>javac<span class="w"> </span>KaixoIkasleak.java
+java<span class="w"> </span>KaixoIkasleak
+</code></pre></div></p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">2. Ariketa — Errore intentzioa</p>
+<p>Kopiatu lehen ariketa eta aldatu klase izena <code>Agur</code>-era, baina fitxategiaren izena <code>KaixoIkasleak.java</code> bezala utzi. Zer errorea ematen du konpiladoreak? Zergatik?</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<p><div class="highlight"><pre><span></span><code>error: class Agur is public, should be declared in a file named Agur.java
+</code></pre></div>
+Java-n klase publiko baten izena eta fitxategiaren izena berdinak izan <strong>behar</strong> dira. Hau ez betetzeak konpilazio-errorea sortzen du.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">3. Ariketa — Iruzkinak</p>
+<p>Sortu <code>NirePrograma.java</code> bat hirurak iruzkina motak erabiliz: lerro bakarrekoa, lerro anitzekoa eta Javadoc iruzkina. Programak zure izena eta ikastetxea pantailaratu behar ditu.</p>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Nire lehen programa Javan.</span>
+<span class="cm"> * @author IkasleIzena</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">NirePrograma</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">     * main metodoa: programaren</span>
+<span class="cm">     * hasierako puntua</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Izena: Mikel Etxeberria&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Nire izena</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Ikastetxea: CIFP Txurdinaga&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<div class="admonition question">
+<p class="admonition-title">4. Ariketa — JDK tresnak</p>
+<p>Erantzun galdera hauei zure hitzetan:</p>
+<ul>
+<li>Zer da <code>javac</code>?</li>
+<li>Zer da <code>java</code>?</li>
+<li>Zein da ezberdintasuna JDK eta JRE artean?</li>
+</ul>
+</div>
+<details class="success">
+<summary>Irtenbidea</summary>
+<ul>
+<li><strong><code>javac</code></strong>: Javaren konpiladorea. <code>.java</code> fitxategiak hartzen ditu eta <code>.class</code> fitxategiak (bytecode) sortzen ditu.</li>
+<li><strong><code>java</code></strong>: JVM-a martxan jartzen duen komandoa. <code>.class</code> fitxategiak interpretatzen eta exekutatzen ditu.</li>
+<li><strong>JDK vs JRE</strong>: JRE Java aplikazioak exekutatzeko nahikoa da. JDK programatzaileentzat da — JRE barne hartzen du eta gainera konpiladorea (<code>javac</code>) eta beste tresnak ditu.</li>
+</ul>
+</details>
+<hr />
+<h2 id="kontzeptuen-laburpen-taula">Kontzeptuen Laburpen-Taula</h2>
+<table>
+<thead>
+<tr>
+<th>Kontzeptua</th>
+<th>Azalpena</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Programazio-lengoaia</td>
+<td>Gizakiaren eta makinaren arteko zubia</td>
+</tr>
+<tr>
+<td>Bytecode</td>
+<td>Java-ren tarteko kodea — JVM-ak ulertzen duen formatua</td>
+</tr>
+<tr>
+<td>JVM</td>
+<td>Bytecode-a exekutatzen duen makina birtuala</td>
+</tr>
+<tr>
+<td>JRE</td>
+<td>Java aplikazioak exekutatzeko ingurunea</td>
+</tr>
+<tr>
+<td>JDK</td>
+<td>Programatzaileen tresna-kutxa osoa</td>
+</tr>
+<tr>
+<td><code>javac</code></td>
+<td>Java konpiladorea</td>
+</tr>
+<tr>
+<td><code>java</code></td>
+<td>JVM exekutatzeko komandoa</td>
+</tr>
+<tr>
+<td><code>public class</code></td>
+<td>Klase publikoaren definizioa</td>
+</tr>
+<tr>
+<td><code>main</code> metodoa</td>
+<td>Programaren hasierako puntua</td>
+</tr>
+<tr>
+<td><code>System.out.println</code></td>
+<td>Pantailaratzeko metodoa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "content.code.copy", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
