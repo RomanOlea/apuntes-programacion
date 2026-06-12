@@ -4,7 +4,7 @@
 !!! abstract "Zer ikasiko duzu gai honetan?"
     Gai honetan Java programazio-lengoaiaren oinarriak ikasiko ditugu: programa bat zer den, nola antolatzen den, zein datu mota dauden eta nola idazten den lehen programa. Hau 1. DAMeko programazioaren abiapuntua da.
 
-📄 [Teoria PDF formatuan deskargatu](recursos/G_1_0_-_Programazio_Oinarriak.pdf)
+📄 [Aurkezpena PDF formatuan deskargatu](G.1.0-Programazio_Oinarriak.pdf)
 
 ---
 
@@ -498,4 +498,3 @@ public class Estatistikak {                                  // 3. Klasearen egi
 
 ---
 
-*Gai hau 1. DAMeko Programazio moduluaren sarrera da — Informatika Sistemen Administrazioa*
